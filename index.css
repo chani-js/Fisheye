@@ -1,0 +1,150 @@
+body {
+    --primary:#901C1C;
+    --secondary:#D3573C;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.site-name{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 2em;
+    padding: 10px;
+
+}
+
+
+.navigation ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.pagename{
+    width: 45%;
+    position: absolute;
+    padding: 10px;
+    top: 6%;
+    right: 0;
+    color: var(--primary);
+}
+.pagename h1{
+    font-size: 0.9em;
+}
+.photographe-nav {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 0;
+    margin: 5px;
+}
+
+
+
+.photographe-nav a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    line-height: 16px;
+    font-weight: bold;
+    border: 0.5px solid #C4C4C4;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 1px 7px;
+    text-align: center;
+}
+.photographe-tag {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 0;
+    margin: 5px;
+}
+
+
+
+.photographe-tag a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    line-height: 16px;
+    font-weight: bold;
+    border: 0.5px solid #C4C4C4;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 1px 7px;
+    text-align: center;
+}
+
+.hashtag ul{
+    text-align: center;
+}
+
+.photographe-nav {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 0;
+    margin: 5px;
+}
+
+
+
+.photographe-nav a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    line-height: 16px;
+    font-weight: bold;
+    border: 0.5px solid #C4C4C4;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 1px 7px;
+    text-align: center;
+}
+
+
+.photographe-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.photographe-card{
+    text-decoration: none;
+    padding: 20pxpx;
+    display: block;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.pics{
+    object-fit: cover;
+    border-radius: 100px;
+    margin: auto;
+    Width :200px;
+    height: 200px;
+    display: block;
+    
+}
+.photographe-description{
+    text-align: center;
+   
+    
+}
+.photographe-description h2{
+    color: var(--secondary) ;
+    font-size: 36px;
+}
+
+.photographe-descr{
+    color: #000000 ;
+    font-weight: 400;
+}
+.photographe-locate{
+    color: var(--primary);
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 1024px){
+    
+}
