@@ -1,7 +1,7 @@
 
 const message='Download impossible'
 
-console.log('toto');
+//console.log('toto');
 
 
 function GetData(){
