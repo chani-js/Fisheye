@@ -1,37 +1,38 @@
 
-const message='Download impossible'
+const message = 'Download impossible'
 
-//console.log('toto');
+console.log('toto');
 
 
-function GetData(){
+function GetData() {
     fetch("./assets/Js/mock.json")
-    .then(function(response){
-        console.log(response)
-        if(response.ok){
-            response.json().then(function(data){
-                console.log(data)
-            Addphotographers(data.photographers)
-            })
-        }
-    })
-    .catch(function(error){
-        console.log('Probléme de l\'opérateur fetch'+error.message)
-    })
-    };
+        .then(function (response) {
+            console.log(response)
+            if (response.ok) {
+                response.json().then(function (data) {
+                    console.log(data)
+                    Addphotographers(data.photographers)
+                })
+            }
+        })
+        .catch(function (error) {
+            console.log('Probléme de l\'opérateur fetch' + error.message)
+        })
+};
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-   GetData()
-  });
 
-  function Addphotographers(photographers){
-      let photographeContainer = document.getElementsByClassName("photographe-container")
-      photographers.forEach(element => {
-          const photographecard = `
+document.addEventListener("DOMContentLoaded", function (event) {
+    GetData()
+});
+
+
+function Addphotographers(photographers) {
+    let photographeContainer = document.getElementsByClassName("photographe-container")
+    photographers.forEach(element => {
+        const photographecard = `
           <a href="" class="photographe-card">
           <div class="image">
               <!--insertion de l'imge en js-->
-              
               <img class="pics" src="./assets/image/SamplePhotos/PhotographersIDPhotos/${element.portrait}" alt="">
           </div>
           <div class="photographe-description">
@@ -48,28 +49,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
               ${element.price}$
               </div>
           </div>
-
       </a>
-        <ul class="hashtag-${element.id}">
-           
+        <ul class="hashtag-${element.id}">   
         </ul>
       `
+        photographeContainer[0].insertAdjacentHTML("beforeend", photographecard)
+        AddTag(element.tags, element.id)
+    });
+}
 
-      photographeContainer[0].insertAdjacentHTML("beforeend",photographecard)
-      AddTag(element.tags,element.id)
-      
 
-      });
-
-  }
-  function AddTag(tags,photographerID){
-      // concataination avec ES2016
-    let tagcontainer = document.getElementsByClassName( `hashtag-${photographerID}`)
-    tags.forEach(element =>{
+function AddTag(tags, photographerID) {
+    // concataination avec ES2016
+    let tagcontainer = document.getElementsByClassName(`hashtag-${photographerID}`)
+    tags.forEach(element => {
         const tag = `
-        <li class="photographe-tag"><a href="${element}">${element}</a></li>
-        ` 
-        tagcontainer[0].insertAdjacentHTML("beforeend",tag)
+        <li class="photographe-tag"><a href="${element}">#${element}</a></li>
+        `
+        tagcontainer[0].insertAdjacentHTML("beforeend", tag)
     })
-  }
+}
 

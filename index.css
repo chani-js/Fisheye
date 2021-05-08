@@ -1,28 +1,26 @@
 body {
-    --primary:#901C1C;
-    --secondary:#D3573C;
+    --primary: #901C1C;
+    --secondary: #D3573C;
     font-family: 'DM Sans', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.site-name{
+.site-name {
     color: var(--primary);
     font-weight: bold;
     font-size: 2em;
     padding: 10px;
-
 }
 
-
-.navigation ul{
+.navigation ul {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
 }
 
-.pagename{
+.pagename {
     width: 45%;
     position: absolute;
     padding: 10px;
@@ -30,9 +28,11 @@ body {
     right: 0;
     color: var(--primary);
 }
-.pagename h1{
+
+.pagename h1 {
     font-size: 0.9em;
 }
+
 .photographe-nav {
     list-style: none;
     display: inline-block;
@@ -40,9 +40,7 @@ body {
     margin: 5px;
 }
 
-
-
-.photographe-nav a{
+.photographe-nav a {
     text-decoration: none;
     color: var(--primary);
     font-weight: 500;
@@ -54,6 +52,7 @@ body {
     padding: 1px 7px;
     text-align: center;
 }
+
 .photographe-tag {
     list-style: none;
     display: inline-block;
@@ -61,9 +60,7 @@ body {
     margin: 5px;
 }
 
-
-
-.photographe-tag a{
+.photographe-tag a {
     text-decoration: none;
     color: var(--primary);
     font-weight: 500;
@@ -76,7 +73,7 @@ body {
     text-align: center;
 }
 
-.hashtag ul{
+.hashtag ul {
     text-align: center;
 }
 
@@ -87,9 +84,7 @@ body {
     margin: 5px;
 }
 
-
-
-.photographe-nav a{
+.photographe-nav a {
     text-decoration: none;
     color: var(--primary);
     font-weight: 500;
@@ -102,13 +97,12 @@ body {
     text-align: center;
 }
 
-
-.photographe-container{
+.photographe-container {
     display: flex;
     flex-direction: column;
 }
 
-.photographe-card{
+.photographe-card {
     text-decoration: none;
     padding: 20pxpx;
     display: block;
@@ -117,34 +111,33 @@ body {
     flex-direction: column;
     text-align: center;
 }
-.pics{
+
+.pics {
     object-fit: cover;
     border-radius: 100px;
     margin: auto;
-    Width :200px;
+    Width: 200px;
     height: 200px;
     display: block;
-    
 }
-.photographe-description{
+
+.photographe-description {
     text-align: center;
-   
-    
 }
-.photographe-description h2{
-    color: var(--secondary) ;
+
+.photographe-description h2 {
+    color: var(--secondary);
     font-size: 36px;
 }
 
-.photographe-descr{
-    color: #000000 ;
+.photographe-descr {
+    color: #000000;
     font-weight: 400;
 }
-.photographe-locate{
+
+.photographe-locate {
     color: var(--primary);
     font-weight: 400;
 }
 
-@media only screen and (min-width: 1024px){
-    
-}
+@media only screen and (min-width: 1024px) {}
