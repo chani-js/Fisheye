@@ -59,6 +59,7 @@ function Addphotographers(photographers) {
 }
 
 
+
 function AddTag(tags, photographerID) {
     // concataination avec ES2016
     let tagcontainer = document.getElementsByClassName(`hashtag-${photographerID}`)
