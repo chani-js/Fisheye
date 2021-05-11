@@ -1,68 +1,60 @@
 
-const message = 'Download impossible'
 
 console.log('toto');
 
-
-function GetData() {
-    fetch("./assets/Js/mock.json")
-        .then(function (response) {
-            console.log(response)
-            if (response.ok) {
-                response.json().then(function (data) {
-                    console.log(data)
-                    Addphotographers(data.photographers)
-                })
-            }
-        })
-        .catch(function (error) {
-            console.log('Probléme de l\'opérateur fetch' + error.message)
-        })
-};
-
-
-document.addEventListener("DOMContentLoaded", function (event) {
-    GetData()
+document.addEventListener("DOMContentLoaded", async function (event) {
+    const datas = await GetData()
+    console.log(datas)
+    const photographer = getphotographer(datas.photographers)
+    console.log(photographer)
+    Addphotographer(photographer)
+    
 });
 
+async function GetData() {
+    const responsemock = await fetch("./assets/Js/mock.json")
+        if (responsemock.ok) {
+            const responsejson= await responsemock.json()
+            return responsejson
+        }
 
-function Addphotographers(photographers) {
-    let photographeContainer = document.getElementsByClassName("photographe-container")
-    photographers.forEach(element => {
-        const photographecard = `
-          <a href="" class="photographe-card">
-          <div class="image">
-              <!--insertion de l'imge en js-->
-              <img class="pics" src="./assets/image/SamplePhotos/PhotographersIDPhotos/${element.portrait}" alt="">
-          </div>
-          <div class="photographe-description">
-              <h2 class="photographe-name" aria-label="Nom du photographe">
-                    ${element.name}
-              </h2>
-              <div class="photographe-locate" aria-label="Localisation Géographique">
-                  ${element.city}, ${element.country}
-              </div>
-              <div class="photographe-descr">
-                ${element.tagline}
-              </div>
-              <div class="photographe-price" aria-label="Prix de la prestation">
-              ${element.price}$
-              </div>
-          </div>
-      </a>
-        <ul class="hashtag-${element.id}">   
+};
+
+function getphotographer(photographers){
+    const querystring= window.location.search
+    const urlparams= new URLSearchParams(querystring)
+    const photographerid= urlparams.get("id")
+    const photographe= photographers.filter(item => item.id==photographerid)
+    return photographe[0]
+}
+
+function Addphotographer(photographer) {
+    let headercontainer = document.getElementsByClassName("header-container")
+
+    const photographecard = `
+        <div class="photographe-name">
+            ${photographer.name}
+        </div>
+        
+        <div class="description">
+            <div class="photographe-locate">
+                ${photographer.city}, ${photographer.country}
+            </div>
+            <div class="photographe-descr">
+                ${photographer.tagline}
+            </div>
+        </div>
+        <ul class="hashtag">   
         </ul>
       `
-        photographeContainer[0].insertAdjacentHTML("beforeend", photographecard)
-        AddTag(element.tags, element.id)
-    });
+    headercontainer[0].insertAdjacentHTML("beforeend", photographecard)
+    AddTag(photographer.tags)
 }
 
 
-
-function AddTag(tags, photographerID) {
+function AddTag(tags) {
     // concataination avec ES2016
-    let tagcontainer = document.getElementsByClassName(`hashtag-${photographerID}`)
+    let tagcontainer = document.getElementsByClassName(`hashtag`)
     tags.forEach(element => {
         const tag = `
         <li class="photographe-tag"><a href="${element}">#${element}</a></li>

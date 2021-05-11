@@ -32,7 +32,6 @@ body {
 .pagename h1 {
     font-size: 0.9em;
 }
-
 .photographe-nav {
     list-style: none;
     display: inline-block;
@@ -73,8 +72,10 @@ body {
     text-align: center;
 }
 
-.hashtag ul {
-    text-align: center;
+.hashtag-ul {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 40px;
 }
 
 .photographe-nav {
@@ -138,6 +139,11 @@ body {
 .photographe-locate {
     color: var(--primary);
     font-weight: 400;
+}
+
+.tagactive{
+    color: white !important;
+    background-color: var(--primary);
 }
 
 @media only screen and (min-width: 1024px) {}

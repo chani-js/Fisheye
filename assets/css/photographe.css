@@ -26,11 +26,11 @@ body {
     padding: 10px;
     text-decoration: none;
 }
-.name{
+.photographe-name{
     color: var(--secondary);
     padding:0 5px;
 }
-.locate{
+.photographe-locate{
     color: var(--primary);
     padding:0 5px;
 }
@@ -39,14 +39,14 @@ body {
     padding:  5px;
     font-size: 0.6em;
 }
-.photographe-nav {
+.hashtag {
     list-style: none;
     display: inline-block;
     padding: 5px 0;
     margin: 5px;
 }
 
-.photographe-nav a {
+.hashtag a {
     text-decoration: none;
     color: var(--primary);
     font-weight: 500;
@@ -58,10 +58,7 @@ body {
     padding: 1px 7px;
     text-align: center;
 }
-.hashtag{
-    display: flex;
-    flex-direction: row;
-}
+
 
 .photographe-img {
     object-fit: cover;
@@ -75,8 +72,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-.texte{
-    color: var(--primary);
+.photographe-descr{
+    color: #525252;
     font-weight: 400;
 }
 .compteur{
