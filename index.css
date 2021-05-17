@@ -145,5 +145,42 @@ body {
     color: white !important;
     background-color: var(--primary);
 }
+@media only screen and (min-width: 1023px) {
+    .photographe-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-@media only screen and (min-width: 1024px) {}
+    }
+    .pics {
+        object-fit: cover;
+        border-radius: 100px;
+        margin: auto;
+        Width: 150px;
+        height: 150px;
+        display: block;
+    }
+    .photographe-card{
+        width: 30%;
+        align-items: center;
+    }
+    .photographe-description h2 {
+        color: var(--secondary);
+        font-size: 0.9em;
+        width: 100%;
+    }
+    .photographe-locate{
+        font-size: 0.7em;
+        padding: 5px;
+    }
+    .photographe-descr{
+        font-size: 0.4em;
+    }
+    .photographe-price{
+        font-size: 0.4em;
+    }
+    .photographe-tag a{
+        font-size: 0.6em;
+    }
+}
