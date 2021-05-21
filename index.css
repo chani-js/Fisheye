@@ -76,6 +76,7 @@ body {
     margin: 0 auto;
     padding: 0;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .photographe-nav {
@@ -184,9 +185,12 @@ body {
         height: 150px;
         display: block;
     }
-    .photographe-card{
+    .photographe-card1{
         width: 33%;
         align-items: center;
+    }
+    .hashtag-ul{
+        text-align: center;
     }
     .photographe-description h2 {
         color: var(--secondary);

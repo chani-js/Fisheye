@@ -1,4 +1,3 @@
-
 let datas =[]
 let filters= {
     portrait: true,
@@ -10,17 +9,6 @@ let filters= {
     animals:true,
     events: true
 }
-async function GetData() {
-    const responsemock = await fetch("./assets/Js/mock.json")
-        if (responsemock.ok) {
-            const responsejson= await responsemock.json()
-            return responsejson
-        }
-
-};
-
-
-
 document.addEventListener("DOMContentLoaded", async function (event) {
     datas = await GetData()
     const photographers=hashtagfilters(datas.photographers)
@@ -29,15 +17,48 @@ document.addEventListener("DOMContentLoaded", async function (event) {
     Array.from(filterselements).forEach(element=> 
         element.addEventListener("click", onclickfilter)
     )
-    
 });
+function hashtagfilters(photographers){
+    let photographe=[]
+    photographers.forEach(element => {
+        let flag=false
+        for (const filter in filters) {
+            if(element.tags.includes(filter) && flag==false && filters[filter]){
+            // flag false pour eviter les doublons dans le tableau de photographe
+                photographe.push(element)
+                flag=true
+            }
+        }
+    })
+    
+    return photographe
+}
+function onclickfilter(event){
+    let photographeContainer = document.getElementsByClassName("photographe-container")
+    photographeContainer[0].innerHTML=""
+    event.target.classList.toggle("tagactive")
+    const attr=event.target.getAttribute("data-attr")
+    filters[attr]=!filters[attr]
+    const photographers=hashtagfilters(datas.photographers)
+    Addphotographers(photographers)
+}
+/*
+async function GetData() {
+    const responsemock = await fetch("./assets/Js/mock.json")
+        if (responsemock.ok) {
+            const responsejson= await responsemock.json()
+            return responsejson
+        }
+};
 
+*/
 
+/*
 function Addphotographers(photographers) {
     let photographeContainer = document.getElementsByClassName("photographe-container")
     photographers.forEach(element => {
         const photographecard = `
-        <div class="photographe-card">
+        <div class="photographe-card1">
             <a href="photographe.html?id=${element.id}" class="photographe-card">
                 <div class="image">
                     <!--insertion de l'imge en js-->
@@ -78,31 +99,4 @@ function AddTag(tags, photographerID) {
         `
         tagcontainer[0].insertAdjacentHTML("beforeend", tag)
     })
-}
-
-function hashtagfilters(photographers){
-    let photographe=[]
-
-    photographers.forEach(element => {
-        let flag=false
-        for (const filter in filters) {
-            if(element.tags.includes(filter) && flag==false && filters[filter]){
-            // flag false pour eviter les doublons dans le tableau de photographe
-                photographe.push(element)
-                flag=true
-            }
-        }
-    })
-    
-    return photographe
-}
-
-function onclickfilter(event){
-    let photographeContainer = document.getElementsByClassName("photographe-container")
-    photographeContainer[0].innerHTML=""
-    event.target.classList.toggle("tagactive")
-    const attr=event.target.getAttribute("data-attr")
-    filters[attr]=!filters[attr]
-    const photographers=hashtagfilters(datas.photographers)
-    Addphotographers(photographers)
-}
+}*/
