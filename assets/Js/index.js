@@ -1,23 +1,16 @@
-let datas =[]
+/*let datas =[]
 let filters= {
-    portrait: true,
-    art: true,
-    fashion: true,
-    architecture: true,
-    travel: true,
-    sports: true,
-    animals:true,
-    events: true
+    all: true,
+    portrait: false,
+    art: false,
+    fashion: false,
+    architecture: false,
+    travel: false,
+    sports: false,
+    animals:false,
+    events: false
 }
-document.addEventListener("DOMContentLoaded", async function (event) {
-    datas = await GetData()
-    const photographers=hashtagfilters(datas.photographers)
-    Addphotographers(photographers)
-    const filterselements= document.getElementsByClassName("photographe-nav")
-    Array.from(filterselements).forEach(element=> 
-        element.addEventListener("click", onclickfilter)
-    )
-});
+
 function hashtagfilters(photographers){
     let photographe=[]
     photographers.forEach(element => {
@@ -26,7 +19,7 @@ function hashtagfilters(photographers){
             if(element.tags.includes(filter) && flag==false && filters[filter]){
             // flag false pour eviter les doublons dans le tableau de photographe
                 photographe.push(element)
-                flag=true
+                flag=false
             }
         }
     })
@@ -41,7 +34,7 @@ function onclickfilter(event){
     filters[attr]=!filters[attr]
     const photographers=hashtagfilters(datas.photographers)
     Addphotographers(photographers)
-}
+}*/
 /*
 async function GetData() {
     const responsemock = await fetch("./assets/Js/mock.json")
@@ -50,6 +43,15 @@ async function GetData() {
             return responsejson
         }
 };
+document.addEventListener("DOMContentLoaded", async function (event) {
+    datas = await GetData()
+    const photographers=hashtagfilters(datas.photographers)
+    Addphotographers(photographers)
+    const filterselements= document.getElementsByClassName("photographe-nav")
+    Array.from(filterselements).forEach(element=> 
+        element.addEventListener("click", onclickfilter)
+    )
+});
 
 */
 
