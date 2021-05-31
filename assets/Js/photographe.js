@@ -1,30 +1,27 @@
-
-
 console.log('toto');
 
-document.addEventListener("DOMContentLoaded", async function (event) {
+document.addEventListener("DOMContentLoaded", async function(event) {
     const datas = await GetData()
     console.log(datas)
     const photographer = getphotographer(datas.photographers)
     console.log(photographer)
     Addphotographer(photographer)
-    
+
 });
 
 async function GetData() {
     const responsemock = await fetch("./assets/Js/mock.json")
-        if (responsemock.ok) {
-            const responsejson= await responsemock.json()
-            return responsejson
-        }
-
+    if (responsemock.ok) {
+        const responsejson = await responsemock.json()
+        return responsejson
+    }
 };
 
-function getphotographer(photographers){
-    const querystring= window.location.search
-    const urlparams= new URLSearchParams(querystring)
-    const photographerid= urlparams.get("id")
-    const photographe= photographers.filter(item => item.id==photographerid)
+function getphotographer(photographers) {
+    const querystring = window.location.search
+    const urlparams = new URLSearchParams(querystring)
+    const photographerid = urlparams.get("id")
+    const photographe = photographers.filter(item => item.id == photographerid)
     return photographe[0]
 }
 
@@ -46,6 +43,10 @@ function Addphotographer(photographer) {
         </div>
         <ul class="hashtag">   
         </ul>
+        <div class="image">
+                    <!--insertion de l'imge en js-->
+                    <img class="pics" src="./assets/image/SamplePhotos/PhotographersIDPhotos/${tphotographer.portrait}" alt="">
+                </div>
       `
     headercontainer[0].insertAdjacentHTML("beforeend", photographecard)
     AddTag(photographer.tags)
@@ -62,4 +63,3 @@ function AddTag(tags) {
         tagcontainer[0].insertAdjacentHTML("beforeend", tag)
     })
 }
-
