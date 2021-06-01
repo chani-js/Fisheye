@@ -66,14 +66,6 @@ class InjectPhotographers {
 
 class PhotographeCard {
     constructor(mock, photoContainer) {
-        /*this.name=mock.name
-        this.id=mock.id
-        this.city=mock.city
-        this.country=mock.country
-        this.tags=mock.tags
-        this.tagline=mock.tagline
-        this.price=mock.price
-        this.portrait=mock.portrait*/
         this.mock = mock
         this.photoContainer = photoContainer
 
@@ -125,7 +117,7 @@ class PhotographeCard {
 
 
 document.addEventListener("DOMContentLoaded", async function(event) {
-    datas = await GetData()
+    const datas = await GetData()
 
     const injectHTML = new InjectPhotographers(datas.photographers)
     injectHTML.render()

@@ -2,77 +2,73 @@
 <html lang="en">
 
 <head>
-    <script src="./assets/Js/photographe.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/photographe.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Photographer page</title>
 </head>
 
 <body>
     <label class="site-name" aria-label="Lien vers la page d'accueil">
-        <a href="index.html">Fish<img src="/Vector.png" alt="">ye </a>
+        <a href="index.html">Fish<img src="/Vector.png" alt="Fisheye home page">ye </a>
         <!-- image a recup -->
     </label>
     <section class="header">
 
         <div class="header-container">
 
+            <button class="bouton" type="button">
+                Contactez-moi
+            </button>
+            <div class="photographe-img">
 
+            </div>
         </div>
-        <div class="photographe-img">
 
-        </div>
-       
-        <section class="photo">
-            <div class="image">
-                img
-            </div>
-            <div class="descr-container">
-                <div class="texte">
-                    Ar-en-ciel
-                </div>
-                <div class="compteur">
-                    12
-                    <i class="fas fa-heart"></i>
-                </div>
-            </div>
+
+
+
+        <section class="select-menu">
+            <select class="select-tri">
+            <option value="popularite">Popularité</option>
+            <option value="date" selected>Date</option>
+            <option value="titre">Titre</option>
+        </select>
         </section>
-    </section>
 
-    <button class="bouton" type="button">
-        Contactez-moi
-    </button>
+        <section class="photo-container">
 
+        </section>
 
 
 
 
-    <section class="modal">
-        <form action="photographe.html" method="get" onsubmit="">
-            <div class="FormPhoto">
-                <label for="prenom">Prénom</label><br>
-                <input class="" type="text" id="prenom" name="prenom"><br>
-            </div>
-            <div class="FormPhoto">
-                <label for="nom">Nom</label><br>
-                <input class="" type="text" id="nom" name="nom"><br>
-            </div>
-            <div class="FormPhoto">
-                <label for="mail">Email</label><br>
-                <input class="" type="email" id="email" name="email"><br>
-            </div>
-            <div class="FormPhoto">
-                <label for="message">Message</label><br>
-                <textarea class="" name="message" id="message"></textarea>
-            </div>
-        </form>
-    </section>
 
+        <section class="modal">
+            <form action="photographe.html" method="get" onsubmit="">
+                <div class="FormPhoto">
+                    <label for="prenom">Prénom</label><br>
+                    <input class="" type="text" id="prenom" name="prenom"><br>
+                </div>
+                <div class="FormPhoto">
+                    <label for="nom">Nom</label><br>
+                    <input class="" type="text" id="nom" name="nom"><br>
+                </div>
+                <div class="FormPhoto">
+                    <label for="mail">Email</label><br>
+                    <input class="" type="email" id="email" name="email"><br>
+                </div>
+                <div class="FormPhoto">
+                    <label for="message">Message</label><br>
+                    <textarea class="" name="message" id="message"></textarea>
+                </div>
+            </form>
+        </section>
+        <script src="./assets/Js/photographe.js"></script>
 </body>
 
 </html>
