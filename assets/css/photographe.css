@@ -85,14 +85,6 @@ body {
     right: 40px
 }
 
-.image-select img,
-video {
-    width: 95%;
-    height: 200px;
-    padding: 10px;
-    object-fit: cover;
-}
-
 .descr-container {
     display: flex;
     flex-direction: row;
@@ -148,6 +140,10 @@ video {
     display: none;
 }
 
+.image-select {
+    text-align: center;
+}
+
 .modal {
     display: none;
 }
@@ -155,6 +151,15 @@ video {
 .photo-container {
     width: 100%;
     margin: auto;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding: 10px;
+    color: var(--primary);
 }
 
 @media only screen and (min-width: 1023px) {
@@ -173,6 +178,7 @@ video {
         position: relative;
         margin-top: 50px;
         margin-left: 50px;
+        background-color: #FAFAFA;
     }
     .photographe-name {
         font-size: 2.5em;
@@ -192,6 +198,13 @@ video {
     }
     .hashtag a {
         font-size: 0.9em;
+    }
+    .image img {
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
+        position: absolute;
+        top: 0;
     }
     button {
         position: absolute;
@@ -230,7 +243,8 @@ video {
     .image-select {
         width: 33%;
     }
-    .image-select img {
+    .image-select img,
+    video {
         object-fit: cover;
         width: 350px;
         height: 300px;

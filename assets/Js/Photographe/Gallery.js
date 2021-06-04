@@ -10,7 +10,10 @@ class Gallery {
             let card = `<div class="image-select">`
             const media = new Media(element, this.photographer)
             card += media.render()
-            card += `<p>${element.likes}<i class="fas fa-heart"></i></p> </div>`
+            card += `<div class="title-container">
+                        <p class="photo-title">${element.title}</p>
+                        <p>${element.likes}<i class="fas fa-heart"></i></p>
+                    </div> </div>`
             photocontainer[0].insertAdjacentHTML("beforeend", card)
         })
 
