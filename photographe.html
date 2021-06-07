@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,66 +12,76 @@
 </head>
 
 <body>
+    <!--Section nom du site-->
     <label class="site-name" aria-label="Lien vers la page d'accueil">
         <a href="index.html">Fish<img src="/Vector.png" alt="Fisheye home page">ye </a>
-        <!-- image a recup -->
     </label>
+    <!--Section Header-->
     <section class="header">
-
         <div class="header-container">
-
             <button class="bouton" type="button">
                 Contactez-moi
             </button>
             <div class="photographe-img">
-
             </div>
         </div>
-
-
-
-
-        <section class="select-menu">
+    </section>
+    <!--Section select menu-->
+    <section class="select-menu">
+        <p>Trier par :
             <select class="select-tri">
-            <option value="popularite">Popularité</option>
-            <option value="date" selected>Date</option>
-            <option value="titre">Titre</option>
-        </select>
-        </section>
-
-        <section class="photo-container">
-
-        </section>
-
-
-        <section class="modal">
-            <form name="contact" action="photographe.html" method="get" onsubmit="">
-                <div class="FormPhoto">
-                    <label for="prenom">Prénom</label><br>
-                    <input class="" type="text" id="prenom" name="prenom"><br>
-                </div>
-                <div class="FormPhoto">
-                    <label for="nom">Nom</label><br>
-                    <input class="" type="text" id="nom" name="nom"><br>
-                </div>
-                <div class="FormPhoto">
-                    <label for="mail">Email</label><br>
-                    <input class="" type="email" id="email" name="email"><br>
-                </div>
-                <div class="FormPhoto">
-                    <label for="message">Message</label><br>
-                    <textarea class="" name="message" id="message"></textarea>
-                </div>
-            </form>
-        </section>
-        <!--balise JavaScrip-->
-        <script src="./assets/Js/Functions.js"></script>
-        <script src="./assets/Js/Photographe/Media.js"></script>
-        <script src="./assets/Js/Photographe/Gallery.js"></script>
-        <script src="./assets/Js/Photographe/PhotographerCard.js"></script>
-        <script src="./assets/Js/Photographe/InjectPhotographer.js"></script>
-        <script src="./assets/Js/Photographe/MainPhotographer.js"></script>
-        <!--balise JavaScrip-->
+                <option value="popularite">Popularité</option>
+                <option value="date" selected>Date</option>
+                <option value="titre">Titre</option>
+            </select>
+        </p>
+    </section>
+    <!--Section photographe card-->
+    <section class="photo-container">
+    </section>
+    <!--Section Modal-->
+    <section class="modal">
+        <form name="contact" action="photographe.html" method="get" onsubmit="">
+            <p>
+                Contactez-moi <br> Nom du Photogrphe
+            </p>
+            <div class="FormPhoto">
+                <label for="prenom">Prénom</label><br>
+                <input class="" type="text" id="prenom" name="prenom"><br>
+            </div>
+            <div class="FormPhoto">
+                <label for="nom">Nom</label><br>
+                <input class="" type="text" id="nom" name="nom"><br>
+            </div>
+            <div class="FormPhoto">
+                <label for="mail">Email</label><br>
+                <input class="" type="email" id="email" name="email"><br>
+            </div>
+            <div class="FormPhoto">
+                <label for="message">Message</label><br>
+                <textarea class="" name="message" id="message"></textarea>
+            </div>
+            <button>Envoyer</button>
+        </form>
+    </section>
+    <!--SlideShow-->
+    <section class="Diaporama">
+        <div id="slider">
+            <img src="./assets/image/SamplePhotos/Ellie-Rose/Architecture_Connected_Curves.jpg" alt="La forêt de peupliers" id="slide">
+            <div id="precedent" onclick="ChangeSlide(-1)"></div>
+            <div id="suivant" onclick="ChangeSlide(1)">></div>
+        </div>
+    </section>
+    <!--SlideShow-->
+    <!--balise JavaScrip-->
+    <script src="./assets/Js/Photographe/Modal.js"></script>
+    <script src="./assets/Js/Functions.js"></script>
+    <script src="./assets/Js/Photographe/Media.js"></script>
+    <script src="./assets/Js/Photographe/Gallery.js"></script>
+    <script src="./assets/Js/Photographe/PhotographerCard.js"></script>
+    <script src="./assets/Js/Photographe/InjectPhotographer.js"></script>
+    <script src="./assets/Js/Photographe/MainPhotographer.js"></script>
+    <!--balise JavaScrip-->
 
 </body>
 
