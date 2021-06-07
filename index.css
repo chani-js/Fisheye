@@ -10,7 +10,7 @@ body {
 .site-name {
     color: var(--primary);
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.6em;
     padding: 10px;
 }
 
@@ -20,11 +20,17 @@ body {
     text-align: center;
 }
 
-.pagename {
+.banner-mobile {
+    display: flex;
+    flex-direction: row;
+}
+
+.pagename-mobile {
     width: 45%;
     position: absolute;
     padding: 10px;
     top: 6%;
+    font-size: 0.6em;
     right: 0;
     color: var(--primary);
 }
@@ -175,6 +181,9 @@ body {
     .pagename {
         font-size: 2em;
         left: 71%;
+    }
+    .pagename-mobile {
+        display: none;
     }
     .photographe-container {
         width: 100%;

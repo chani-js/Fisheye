@@ -7,7 +7,7 @@ class Gallery {
     render() {
         let photocontainer = document.getElementsByClassName("photo-container")
         this.medias.forEach(element => {
-            let card = `<div class="image-select">`
+            let card = `<div class="image-select slideshow">`
             const media = new Media(element, this.photographer)
             card += media.render()
             card += `<div class="title-container">

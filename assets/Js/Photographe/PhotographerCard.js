@@ -44,3 +44,18 @@ class PhotographerCard {
     }
 
 }
+/*class PhotographerName {
+    constructor(photographer) {
+        this.photographer = photographer
+
+    }
+    render() {
+        let names = document.getElementsByClassName("contact-name")
+
+        const name = `<div class="names">
+                        ${this.Photographer.name}
+                       </div> `
+        console.log("toto" + "name")
+        names.insertAdjacentHTML("beforeend", name)
+    }
+}*/

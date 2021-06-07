@@ -14,8 +14,11 @@ class InjectPhotographer {
         const photographerCard = new PhotographerCard(photographer)
         const medias = this.mock.media.filter((element) => element.photographerId === photographer.id)
         const gallery = new Gallery(medias, photographer)
+        const slider = new Slider(medias, photographer)
         photographerCard.render()
         gallery.render()
+        slider.render() /* creation de la modal */
+        slider.renderMedias() /* inject medias dans le modal */
 
 
     }

@@ -3,10 +3,11 @@ const modalbtn = document.querySelectorAll(".bouton")
 const form = document.querySelector("form")
 const minchar = "Ce champs doit contenir 2 caractères ou plus";
 const mail = "Vous devez entrer une adresse Mail valide";
+const mincharmessage = "Ce champs doit contenir 25 caractères ou plus";
 
 modalbtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-//Vérification champs nom et prénom avec un minimum de 2 lettres
+
 function launchModal() {
     form.style.display = "block"
     form.reset()
