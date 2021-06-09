@@ -45,6 +45,7 @@ class Slider {
     render() {
         let modal = document.getElementsByClassName("modal-slider")
         let slider = `
+        
                 <div class="slider">
                 <div class="slider-content"></div>
                     <div class="precedent"><</div>

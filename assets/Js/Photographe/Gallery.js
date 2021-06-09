@@ -15,7 +15,17 @@ class Gallery {
                         <p>${element.likes}<i class="fas fa-heart"></i></p>
                     </div> </div>`
             photocontainer[0].insertAdjacentHTML("beforeend", card)
+
         })
+        let images = document.getElementsByClassName("image-select")
+        let mod = document.getElementsByClassName("modal-slider")
+        console.log(images)
+        for (var i = 0; i < images.length; i++) {
+            images[i].addEventListener("click", () => mod[0].classList.remove("modal-display"))
+        }
+        /* images.forEach(image => {
+             image.addEventListener("click", () => mod[0].classlist.remove("modal-display"))
+         })*/
 
 
     }
