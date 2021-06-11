@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/photographe.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Photographer page</title>
@@ -22,7 +23,7 @@
     <!--Section Header-->
     <section class="header">
         <div class="header-container">
-            <button class="bouton" type="button">
+            <button class="bouton modal-btn" type="button">
                 Contactez-moi
             </button>
             <div class="photographe-img">
@@ -42,49 +43,80 @@
     <!--Section photographe card-->
     <section class="photo-container">
     </section>
-    <!--Section Modal-->
-    <section class="modal">
+    <!--Section Modal
+    <section class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-wrapper">
+            <form name="contact" action="photographe.html" method="get" onsubmit="">
+                <p class="contact-name">
+                    Contactez-moi <br>
+                </p>
+                <div class="FormPhoto">
+                    <label for="prenom">Prénom</label><br>
+                    <input class="" type="text" id="prenom" name="prenom"><br>
+                </div>
+                <div class="FormPhoto">
+                    <label for="nom">Nom</label><br>
+                    <input class="" type="text" id="nom" name="nom"><br>
+                </div>
+                <div class="FormPhoto">
+                    <label for="mail">Email</label><br>
+                    <input class="" type="email" id="email" name="email"><br>
+                </div>
+                <div class="FormPhoto">
+                    <label for="message">Message</label><br>
+                    <textarea class="" name="message" id="message"></textarea>
+                </div>
+                <button>Envoyer</button>
+            </form>
+        </div>
+    </section>-->
+    <div class="bground">
+        <div class="content">
+            <span class="close close-event"></span>
+            <div class="modal-body">
+                <div class="success">
+                    <p>Merci Vous recevrez une réponse dans les pus bref delais</p>
+                    <input class="btn-submit button close-event" type="submit" value="Close" />
+                </div>
+                <form name="reserve" action="index.html" method="get" onsubmit="validate();return false">
+                    <p class="contact-name">
+                        Contactez-moi <br>
+                    </p>
+                    <div class="formData">
+                        <label for="first">Prénom</label><br>
+                        <input class="text-control" type="text" id="first" name="first" /><br>
+                    </div>
+                    <div class="formData">
+                        <label for="last">Nom</label><br>
+                        <input class="text-control" type="text" id="last" name="last" /><br>
+                    </div>
+                    <div class="formData">
+                        <label for="email">E-mail</label><br>
+                        <input class="text-control" type="email" id="email" name="email" /><br>
+                    </div>
+                    <div class="FormPhoto">
+                        <label for="message">Message</label><br>
+                        <textarea class="text-area" name="message" id="message" rows="4"></textarea>
+                    </div>
+                    <input class="btn-submit button" type="submit" value="Envoyer" />
+                </form>
+                <!--SlideShow-->
+                <section class="modal-slider modal-display">
+                    <span class="close close-event"></span>
 
-        <form name="contact" action="photographe.html" method="get" onsubmit="">
-            <p class="contact-name">
-                Contactez-moi <br>
-            </p>
-            <div class="FormPhoto">
-                <label for="prenom">Prénom</label><br>
-                <input class="" type="text" id="prenom" name="prenom"><br>
-            </div>
-            <div class="FormPhoto">
-                <label for="nom">Nom</label><br>
-                <input class="" type="text" id="nom" name="nom"><br>
-            </div>
-            <div class="FormPhoto">
-                <label for="mail">Email</label><br>
-                <input class="" type="email" id="email" name="email"><br>
-            </div>
-            <div class="FormPhoto">
-                <label for="message">Message</label><br>
-                <textarea class="" name="message" id="message"></textarea>
-            </div>
-            <button>Envoyer</button>
-        </form>
-    </section>
-    <!--SlideShow-->
-    <section class="modal-slider modal-display">
-        <span class="close close-event"></span>
 
-
-    </section>
-    <!--SlideShow-->
-    <!--balise JavaScrip-->
-    <script src="./assets/Js/Photographe/Modal.js"></script>
-    <script src="./assets/Js/Functions.js"></script>
-    <script src="./assets/Js/Photographe/Media.js"></script>
-    <script src="./assets/Js/Photographe/Gallery.js"></script>
-    <script src="./assets/Js/Photographe/PhotographerCard.js"></script>
-    <script src="./assets/Js/Photographe/Slider.js"></script>
-    <script src="./assets/Js/Photographe/InjectPhotographer.js"></script>
-    <script src="./assets/Js/Photographe/MainPhotographer.js"></script>
-    <!--balise JavaScrip-->
+                </section>
+                <!--SlideShow-->
+                <!--balise JavaScrip-->
+                <script src="./assets/Js/Photographe/Modal.js"></script>
+                <script src="./assets/Js/Functions.js"></script>
+                <script src="./assets/Js/Photographe/Media.js"></script>
+                <script src="./assets/Js/Photographe/Gallery.js"></script>
+                <script src="./assets/Js/Photographe/PhotographerCard.js"></script>
+                <script src="./assets/Js/Photographe/Slider.js"></script>
+                <script src="./assets/Js/Photographe/InjectPhotographer.js"></script>
+                <script src="./assets/Js/Photographe/MainPhotographer.js"></script>
+                <!--balise JavaScrip-->
 
 </body>
 

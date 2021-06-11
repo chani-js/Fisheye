@@ -3,8 +3,6 @@ class PhotographerCard {
         this.photographer = photographer
 
     }
-
-
     render() {
         let headercontainer = document.getElementsByClassName("header-container")
 
@@ -29,7 +27,6 @@ class PhotographerCard {
           `
         headercontainer[0].insertAdjacentHTML("beforeend", photographecard)
     }
-
     injectTag(tags) {
         // concataination avec ES2016
         let ul = `<ul class="hashtag hashtag-ul">  `
@@ -42,7 +39,6 @@ class PhotographerCard {
         ul += `</ul>`
         return ul
     }
-
 }
 /*class PhotographerName {
     constructor(photographer) {

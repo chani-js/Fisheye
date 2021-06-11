@@ -19,8 +19,6 @@ class InjectPhotographer {
         gallery.render()
         slider.render() /* creation de la modal */
         slider.renderMedias() /* inject medias dans le modal */
-
-
     }
 
 }

@@ -32,7 +32,7 @@ class Slider {
             let slider = document.getElementsByClassName("slider-content")
             this.medias.forEach((element, index) => {
 
-
+                /*changer pour afficher la photo cliquée en premier*/
                 let slide = `<div class="slide ${index==0?"slide-active":""}">`
                 const media = new Media(element, this.photographer)
                 slide += media.render()

@@ -152,46 +152,6 @@ video {
     margin: auto;
 }
 
-
-/*Traitement de la modal*/
-
-.FormPhoto {
-    margin-top: 20px;
-}
-
-.modal {
-    /*display: none !important;*/
-    border: 1px solid var(--primary);
-    width: 90%;
-    margin: auto;
-    padding: 10px;
-    display: block;
-    background-color: #DB8876;
-}
-
-.modal p {
-    font-size: 1.5em;
-}
-
-.modal label {
-    padding: 4px;
-    color: #312E2E;
-}
-
-.modal input {
-    width: 97%;
-    margin: auto;
-    height: 30px;
-}
-
-.modal textarea {
-    width: 97%;
-    height: 100px;
-}
-
-
-/* fin traitement de la modal*/
-
 .photo-container {
     width: 100%;
     margin: auto;

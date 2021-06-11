@@ -20,14 +20,10 @@ class Gallery {
         let images = document.getElementsByClassName("image-select")
         let mod = document.getElementsByClassName("modal-slider")
         console.log(images)
+            /*add event listener du slider*/
         for (var i = 0; i < images.length; i++) {
             images[i].addEventListener("click", () => mod[0].classList.remove("modal-display"))
         }
-        /* images.forEach(image => {
-             image.addEventListener("click", () => mod[0].classlist.remove("modal-display"))
-         })*/
-
-
     }
 
 }
