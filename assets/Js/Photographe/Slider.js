@@ -27,6 +27,15 @@ class Slider {
         }
 
     }
+    goToSlide(index) {
+        const slide = document.getElementsByClassName("slide-active")[0]
+        slide.classList.remove("slide-active")
+        const slidetarget = document.getElementsByClassName("slide")
+        console.log(slidetarget, index)
+        slidetarget[index].classList.add("slide-active")
+
+
+    }
     renderMedias() {
             /* recuperation des medias pour les injecter dans le slider*/
             let slider = document.getElementsByClassName("slider-content")

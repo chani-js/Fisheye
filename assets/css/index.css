@@ -26,17 +26,17 @@ body {
 }
 
 .pagename-mobile {
-    width: 45%;
+    width: 50%;
     position: absolute;
     padding: 10px;
-    top: 6%;
-    font-size: 0.6em;
+    top: 4%;
+    font-size: 0.9em;
     right: 0;
     color: var(--primary);
 }
 
 .pagename h1 {
-    font-size: 0.9em;
+    display: none;
 }
 
 .photographe-nav {
@@ -178,9 +178,13 @@ body {
     .navigation a {
         font-size: 0.9em;
     }
-    .pagename {
+    .pagename h1 {
+        display: block;
         font-size: 2em;
-        left: 71%;
+        color: var(--primary);
+        position: absolute;
+        top: 58px;
+        right: 190px;
     }
     .pagename-mobile {
         display: none;

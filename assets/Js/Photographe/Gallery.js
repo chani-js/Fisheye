@@ -1,7 +1,9 @@
 class Gallery {
-    constructor(medias, photographer) {
+    constructor(medias, photographer, slider) {
         this.photographer = photographer
         this.medias = medias
+        this.slider = slider
+
     }
 
     render() {
@@ -21,8 +23,17 @@ class Gallery {
         let mod = document.getElementsByClassName("modal-slider")
         console.log(images)
             /*add event listener du slider*/
+
         for (var i = 0; i < images.length; i++) {
-            images[i].addEventListener("click", () => mod[0].classList.remove("modal-display"))
+            console.log(images[i])
+            images[i].setAttribute("image", i)
+            images[i].addEventListener("click", (e) => {
+                mod[0].classList.remove("modal-display")
+                console.log(e.target.parentElement.getAttribute("image"))
+                this.slider.goToSlide(parseInt(e.target.parentElement.getAttribute("image")))
+
+            })
+
         }
     }
 
