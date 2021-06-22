@@ -35,6 +35,16 @@ class Gallery {
             })
 
         }
+
+        let compteur = 0;
+        for (var i = 0; i < this.medias.length; i++) {
+            compteur += this.medias[i].likes
+            console.log('compteur ', compteur)
+        }
+        var likeTotal = document.getElementById("like");
+        console.log('liketotal ', likeTotal)
+        likeTotal.innerHTML += compteur;
+
     }
 
 }
