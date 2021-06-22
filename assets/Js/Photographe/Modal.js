@@ -8,7 +8,7 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
+const modalbg = document.querySelector(".display-none");
 const form = document.querySelector("form");
 const success = document.querySelector(".success");
 const modalBtn = document.querySelectorAll(".modal-btn");
@@ -21,7 +21,6 @@ const minchar = "Veuillez entrer 2 caractères ou plus";
 // add event listeners
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
-
 // open modal
 function launchModal() {
     success.style.display = "none";
@@ -37,9 +36,12 @@ function launchModal() {
 
 }
 
-// close modal
-function closeModal() {
-    modalbg.style.display = "none";
+//
+function closeModal(e) {
+    console.log('heeeelo ', e.currentTarget.closest('.display-none'))
+        // recuperation de l'element cliqué sur le e
+        //.closest recupere l'element parent afin de le cacher en display none
+    e.currentTarget.closest('.display-none').style.display = "none";
 }
 
 

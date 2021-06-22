@@ -27,7 +27,6 @@ body {
     color: var(--primary);
     font-weight: bold;
     font-size: 3em;
-    padding: 10px;
     text-decoration: none;
 }
 
@@ -171,6 +170,10 @@ video {
     margin-left: 5px;
 }
 
+.like-price {
+    display: none;
+}
+
 @media only screen and (min-width: 1023px) {
     body {
         box-sizing: border-box;
@@ -299,4 +302,21 @@ video {
     .suivant {
         right: 50%;
     }
+}
+
+.like-price {
+    border: 1px solid var(--secondary);
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    background-color: var(--secondary);
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    right: 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.like-total {
+    margin-right: 20px;
 }

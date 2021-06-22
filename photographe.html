@@ -18,13 +18,13 @@
 
     </div>
     <!--Section nom du site-->
-    <label class="site-name" aria-label="Lien vers la page d'accueil">
-        <a href="index.html">Fish<img src="/Vector.png" alt="Fisheye home page">ye </a>
+    <label class="site-name" aria-label="fisheye retour a la page d'accueil">
+        <a href="index.html" >Fish<img src="/Vector.png" >ye</a>
     </label>
     <!--Section Header-->
     <section class="header">
         <div class="header-container">
-            <button class="bouton modal-btn" type="button">
+            <button aria-label="contactez moi" class="bouton modal-btn" type="button">
                 Contactez-moi
             </button>
             <div class="photographe-img">
@@ -33,11 +33,11 @@
     </section>
     <!--Section select menu-->
     <section class="select-menu">
-        <p>Trier par :
+        <p aria-label="Triez par">Trier par :
             <select class="select-tri">
-                <option value="popularite">Popularité</option>
-                <option value="date" selected>Date</option>
-                <option value="titre">Titre</option>
+                <option value="popularite" aria-label="popularité">Popularité</option>
+                <option value="date" selected aria-label="date">Date</option>
+                <option value="titre" aria-label="titre">Titre</option>
             </select>
         </p>
     </section>
@@ -47,9 +47,9 @@
     <!--Section Modal-->
 
 
-    <div class="bground">
+    <div class="bground display-none">
         <div class="content">
-            <span class="close close-event"></span>
+            <span class="close close-event" aria-label="fermeture contact"></span>
             <div class="modal-body">
                 <div class="success">
                     <p>Merci Vous recevrez une réponse dans les pus bref delais</p>
@@ -60,28 +60,38 @@
                         Contactez-moi <br>
                     </p>
                     <div class="formData">
-                        <label for="first">Prénom</label><br>
+                        <label for="first" aria-label="prénom">Prénom</label><br>
                         <input class="text-control" type="text" id="first" name="first" /><br>
                     </div>
                     <div class="formData">
-                        <label for="last">Nom</label><br>
+                        <label for="last" aria-label="nom">Nom</label><br>
                         <input class="text-control" type="text" id="last" name="last" /><br>
                     </div>
                     <div class="formData">
-                        <label for="email">E-mail</label><br>
+                        <label for="email" aria-label="courriel">E-mail</label><br>
                         <input class="text-control" type="email" id="email" name="email" /><br>
                     </div>
                     <div class="FormPhoto">
-                        <label for="message">Message</label><br>
+                        <label for="message" aria-label="votre message">Message</label><br>
                         <textarea class="text-area" name="message" id="message" rows="4"></textarea>
                     </div>
-                    <input class="btn-submit button" type="submit" value="Envoyer" />
+                    <input class="btn-submit button" type="submit" value="Envoyer" aria-label="Envoyer" />
                 </form>
             </div>
         </div>
     </div>
+    <section class="like-price">
+        <div class="like-total">
+            {this.media.likes=+this.media.likes}
+        </div>
+        <div class="price" aria-label="prix">
+            300$/jour
+        </div>
+    </section>
     <!--SlideShow-->
-    <section class="modal-slider modal-display">
+    <section class="modal-slider modal-display close-slider display-none ">
+        <span class="close close-event"></span>
+
 
 
 
@@ -94,7 +104,9 @@
     <script src="./assets/Js/Photographe/Gallery.js"></script>
     <script src="./assets/Js/Photographe/PhotographerCard.js"></script>
     <script src="./assets/Js/Photographe/Slider.js"></script>
+
     <script src="./assets/Js/Photographe/InjectPhotographer.js"></script>
+    <script src="./assets/Js/Photographe/Compteur.js"></script>
     <script src="./assets/Js/Photographe/MainPhotographer.js"></script>
     <!--balise JavaScrip-->
 
