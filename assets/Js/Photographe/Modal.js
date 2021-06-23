@@ -38,9 +38,8 @@ function launchModal() {
 
 //
 function closeModal(e) {
-    console.log('heeeelo ', e.currentTarget.closest('.display-none'))
-        // recuperation de l'element cliqué sur le e
-        //.closest recupere l'element parent afin de le cacher en display none
+    // recuperation de l'element cliqué sur le e
+    //.closest recupere l'element parent afin de le cacher en display none
     e.currentTarget.closest('.display-none').style.display = "none";
 }
 
@@ -78,6 +77,7 @@ function validate() {
                     setError(formData, 'must be an adress mail')
                     validate = false
                 }
+                // creer la case pour le message avec une longueur de 25 minimum
                 break;
             default:
                 console.log(`no ${fieldName} found.`);

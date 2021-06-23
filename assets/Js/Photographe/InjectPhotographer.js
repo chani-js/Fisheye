@@ -16,9 +16,17 @@ class InjectPhotographer {
         const slider = new Slider(medias, photographer)
         const gallery = new Gallery(medias, photographer, slider)
         photographerCard.render()
-        gallery.render()
+        gallery.render("date")
+        gallery.renderlike()
         slider.render() /* creation de la modal */
         slider.renderMedias() /* inject medias dans le modal */
+        var select = document.getElementsByClassName("select-tri")[0]
+        select.addEventListener("change", (event) => {
+            let photocontainer = document.getElementsByClassName("photo-container")[0]
+            photocontainer.innerHTML = " "
+                //console.log("event", event)
+            gallery.render(event.target.value)
+        })
     }
 
 }

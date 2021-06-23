@@ -4,7 +4,7 @@ class Slider {
         this.photographer = photographer
     }
     handleClickArrow(arrow) {
-        console.log(arrow)
+        //console.log(arrow)
         const slide = document.getElementsByClassName("slide-active")[0]
         slide.classList.remove("slide-active")
         if (arrow == "precedent") {
@@ -31,7 +31,7 @@ class Slider {
         const slide = document.getElementsByClassName("slide-active")[0]
         slide.classList.remove("slide-active")
         const slidetarget = document.getElementsByClassName("slide")
-        console.log(slidetarget, index)
+            //console.log(slidetarget, index)
         slidetarget[index].classList.add("slide-active")
 
 
@@ -45,7 +45,7 @@ class Slider {
                 let slide = `<div class="slide ${index==0?"slide-active":""}">`
                 const media = new Media(element, this.photographer)
                 slide += media.render()
-                slide += ` </div>`
+                slide += `  </div>`
                 slider[0].insertAdjacentHTML("beforeend", slide)
             })
 
