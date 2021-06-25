@@ -7,6 +7,7 @@ class Slider {
         //console.log(arrow)
         const slide = document.getElementsByClassName("slide-active")[0]
         slide.classList.remove("slide-active")
+            // configuration des boutons precedent et suivant
         if (arrow == "precedent") {
             const slideprev = slide.previousSibling
             if (slideprev) {

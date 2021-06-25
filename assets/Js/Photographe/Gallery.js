@@ -11,7 +11,7 @@ class Gallery {
         let photocontainer = document.getElementsByClassName("photo-container")
         let sortmedia = this.medias
             //console.log("sort", sort)
-
+            // sort sert a trier les photos 
         if (sort) {
 
             sortmedia = this.medias.sort((a, b) => {
@@ -20,6 +20,7 @@ class Gallery {
                 return 0;
             })
         }
+        // ajout des medias dans la carte du photographe en fonction de son id (le test est fait dans le injectphotographer)
         sortmedia.forEach((element, index) => {
             let card = `<div class="image-select slideshow" tabindex=${index}>`
             const media = new Media(element, this.photographer)
@@ -31,6 +32,8 @@ class Gallery {
             photocontainer[0].insertAdjacentHTML("beforeend", card)
 
         })
+
+        //Créeation du slide et affichage de l'image sur laquelle on clic
         let images = document.getElementsByClassName("image-select")
         let mod = document.getElementsByClassName("modal-slider")
             //console.log(images)

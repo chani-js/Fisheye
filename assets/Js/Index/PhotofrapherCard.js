@@ -1,19 +1,20 @@
 class PhotographeCard {
     constructor(mock, photoContainer) {
-        /*this.name=mock.name
-        this.id=mock.id
-        this.city=mock.city
-        this.country=mock.country
-        this.tags=mock.tags
-        this.tagline=mock.tagline
-        this.price=mock.price
-        this.portrait=mock.portrait*/
-        this.mock = mock
-        this.photoContainer = photoContainer
+            /*this.name=mock.name
+            this.id=mock.id
+            this.city=mock.city
+            this.country=mock.country
+            this.tags=mock.tags
+            this.tagline=mock.tagline
+            this.price=mock.price
+            this.portrait=mock.portrait*/
+            this.mock = mock
+            this.photoContainer = photoContainer
 
-    }
+        }
+        //Crée la carte de chaque photographe
     render() {
-        const card = `
+            const card = `
         <div class="photographe-card1">
             <a href="photographe.html?id=${this.mock.id}" class="photographe-card">
                 <div class="image">
@@ -37,8 +38,9 @@ class PhotographeCard {
             ${this.injectTag(this.mock.tags)}
         </div>
       `
-        this.photoContainer.insertAdjacentHTML("beforeend", card)
-    }
+            this.photoContainer.insertAdjacentHTML("beforeend", card)
+        }
+        // recupere les tag du json pour ensuite les injecter dans sa li et le html
     injectTag(tags) {
         // concataination avec ES2016
         let ul = `<ul class="hashtag hashtag-ul">  `

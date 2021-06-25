@@ -1,9 +1,10 @@
 class InjectPhotographers {
     constructor(photographers) {
-        this.photographers = photographers
-        this.filters = []
-        this.onclick = this.onclickfilter.bind(this)
-    }
+            this.photographers = photographers
+            this.filters = []
+            this.onclick = this.onclickfilter.bind(this)
+        }
+        // creation du filtre par tag
     filtersByTags(photographersjson) {
         if (this.filters.length == 0)
             return photographersjson
@@ -27,6 +28,7 @@ class InjectPhotographers {
         event.target.classList.toggle("tagactive")
         const attr = event.target.getAttribute("data-attr")
         if (this.filters.includes(attr))
+        //.spice modifie le contenue du tableau
             this.filters.splice(this.filters.indexOf(attr), 1)
         else
             this.filters.push(attr)
