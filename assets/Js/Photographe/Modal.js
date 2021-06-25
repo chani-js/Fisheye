@@ -75,10 +75,9 @@ function validate() {
                 break;
             case 'email':
                 if (!checkEmail(fieldValue)) {
-                    setError(formData, 'must be an adress mail')
+                    setError(formData, 'Votre adresse mail n\'est pas valide')
                     validate = false
                 }
-                // creer la case pour le message avec une longueur de 25 minimum
                 break;
             default:
                 console.log(`no ${fieldName} found.`);
@@ -100,6 +99,7 @@ function checkMinLength(str) {
         return true
     return false
 }
+
 
 function checkEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
