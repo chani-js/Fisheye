@@ -61,6 +61,7 @@ function validate() {
 
         switch (fieldName) {
             case 'first':
+
                 if (!checkMinLength(fieldValue)) {
                     setError(formData, minchar)
                     validate = false

@@ -20,8 +20,8 @@ class Gallery {
                 return 0;
             })
         }
-        sortmedia.forEach(element => {
-            let card = `<div class="image-select slideshow ">`
+        sortmedia.forEach((element, index) => {
+            let card = `<div class="image-select slideshow" tabindex=${index}>`
             const media = new Media(element, this.photographer)
             card += media.render()
             card += `<div class="title-container">
