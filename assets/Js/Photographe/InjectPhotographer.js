@@ -25,7 +25,6 @@ class InjectPhotographer {
         select.addEventListener("change", (event) => {
             let photocontainer = document.getElementsByClassName("photo-container")[0]
             photocontainer.innerHTML = " "
-                //console.log("event", event)
                 //affiche l(image ) sur laquelle on  cliquer dns le slider en premier
             gallery.render(event.target.value)
         })

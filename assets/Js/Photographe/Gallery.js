@@ -10,7 +10,6 @@ class Gallery {
     render(sort) {
         let photocontainer = document.getElementsByClassName("photo-container")
         let sortmedia = this.medias
-            //console.log("sort", sort)
             // sort sert a trier les photos 
         if (sort) {
 
@@ -36,15 +35,12 @@ class Gallery {
         //Créeation du slide et affichage de l'image sur laquelle on clic
         let images = document.getElementsByClassName("image-select")
         let mod = document.getElementsByClassName("modal-slider")
-            //console.log(images)
             /*add event listener du slider*/
 
         for (var i = 0; i < images.length; i++) {
-            //console.log(images[i])
             images[i].setAttribute("image", i)
             images[i].addEventListener("click", (e) => {
                 mod[0].classList.remove("modal-display")
-                    //console.log(e.target.parentElement.getAttribute("image"))
                 this.slider.goToSlide(parseInt(e.target.parentElement.getAttribute("image")))
 
             })
@@ -53,24 +49,18 @@ class Gallery {
 
 
 
-        // tri des photos selon la date ou le nom ou le nombre de like
-
     }
     renderlike() {
         // compteur du nombre de like
         let compteur = 0;
         for (var i = 0; i < this.medias.length; i++) {
             compteur += this.medias[i].likes
-
-            //console.log('compteur ', compteur)
         }
         var likeTotal = document.getElementById("like");
-        // console.log('liketotal ', likeTotal)
         likeTotal.innerHTML += compteur += `<i class="fas fa-heart">`;
 
         // recupere et injecte le prix dans la div price
         var price = document.getElementById("price")
-        console.log("prix", price)
         price.innerHTML += this.photographer.price += `€/jour`
             //console.log("prix en euros" + this.photographer.price)
     }

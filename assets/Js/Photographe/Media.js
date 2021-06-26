@@ -4,7 +4,6 @@ class Media {
         this.photographer = photographer
     }
     render() {
-        //console.log("Media==>" + this.media)
         // test pour afficher les images ou les videos
         if (this.media.image) {
             return `<img class="cursor-hover" src="./assets/image/SamplePhotos/${this.photographer.name.split(" ")[0]}/${this.media.image}" aria-label="${this.media.title}">`
