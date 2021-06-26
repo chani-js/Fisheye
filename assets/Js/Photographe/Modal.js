@@ -65,19 +65,23 @@ function validate() {
                 if (!checkMinLength(fieldValue)) {
                     setError(formData, minchar)
                     validate = false
-                }
+                } else
+                    return console.log(fieldValue)
                 break;
             case 'last':
                 if (!checkMinLength(fieldValue)) {
                     setError(formData, minchar)
                     validate = false
-                }
+                } else
+                    return console.log(fieldValue)
+
                 break;
             case 'email':
                 if (!checkEmail(fieldValue)) {
                     setError(formData, 'Votre adresse mail n\'est pas valide')
                     validate = false
-                }
+                } else
+                    return console.log(fieldValue)
                 break;
             default:
                 console.log(`no ${fieldName} found.`);
